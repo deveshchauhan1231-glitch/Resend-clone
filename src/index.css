@@ -1,0 +1,125 @@
+/* ==========================================================================
+   SELF-HOSTED FONTS — exact fonts from resend.com
+   ========================================================================== */
+
+/* Inter Variable — UI / body text */
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&display=swap');
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/inter_variable.p.2v4uvb3i5caxn.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Google Sans';
+  src: url('/fonts/google_sans_regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Google Sans';
+  src: url('/fonts/google_sans_medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Commit Mono — code / monospace */
+@font-face {
+  font-family: 'Commit Mono';
+  src: url('/fonts/commit_mono_regular.p.17ccpk27lq6an.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Commit Mono';
+  src: url('/fonts/commit_mono_italic.p.24go0wiyheis0.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+:root {
+  /* Exact font stack used by resend.com */
+  --font-sans:  'Google Sans', 'Inter', 'Segoe UI', sans-serif;
+  
+  --font-mono:  'Commit Mono', 'JetBrains Mono', monospace;
+  --font-ui: 'Google Sans', 'Inter', sans-serif;
+
+
+  --bg: #000000;
+  --panel: #0a0a0a;
+  --panel-card: #0d0d0d;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-subtle: rgba(255, 255, 255, 0.05);
+  --border-strong: rgba(255, 255, 255, 0.16);
+
+  --text-primary: #ededed;
+  --text-secondary: #8e8e8e;
+  --text-muted: #666666;
+
+  --brand-green: #00DF89;
+  --brand-amber: #f5a623;
+  --brand-purple: #a855f7;
+  --brand-blue: #3b82f6;
+  --brand-red: #ef4444;
+
+  font-family: var(--font-sans);
+  color: var(--text-primary);
+  background-color: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #000000;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #000000;
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+/* Custom modern dark scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #000;
+}
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
