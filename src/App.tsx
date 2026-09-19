@@ -8,6 +8,7 @@ import { Integrations } from './components/Integrations'
 import { ProductShowcase } from './components/ProductShowcase'
 import { SiteFooter } from './components/SiteFooter'
 import { Testimonials } from './components/Testimonials'
+import { ReactEmailShowcase } from './components/ReactEmailShowcase.tsx'
 import Svg from "./components/svg.tsx"
 import './App.css'
 
@@ -146,7 +147,7 @@ function App() {
           </p>
           <EditorShowcase />
         </section>
-
+        <ReactEmailShowcase />
         {/* BEYOND EDITING */}
         <BeyondEditing />
 
