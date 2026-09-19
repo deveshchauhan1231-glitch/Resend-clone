@@ -2544,7 +2544,7 @@ a.button {
 
 /* ── Right preview pane ── */
 .re-preview-pane {
-  background: #f5f5f5;
+  
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -2555,12 +2555,12 @@ a.button {
 .re-email-card {
   width: 100%;
   max-width: 380px;
-  background: #ffffff;
+  color:white;
   border-radius: 4px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
   padding: 36px 32px 32px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  color: #111111;
+  
 }
 
 /* Gradient orb */
@@ -2608,14 +2608,14 @@ a.button {
   font-size: 20px;
   font-weight: 400;
   line-height: 1.3;
-  color: #111111;
+  color:white;
   text-align: center;
   margin-bottom: 28px;
 }
 
 .re-email-heading strong {
   font-weight: 700;
-  color: #000000;
+  color:white;
 }
 
 .re-email-body-text {
@@ -2629,17 +2629,17 @@ a.button {
 .re-email-line {
   font-size: 13.5px;
   line-height: 1.65;
-  color: #444444;
+  color:white;
   margin: 0;
 }
 
 .re-email-line strong {
-  color: #111111;
+  color:white;
   font-weight: 600;
 }
 
 .re-email-salutation {
-  color: #111111;
+  color:white;
   font-weight: 400;
 }
 
@@ -2663,7 +2663,7 @@ a.button {
 
 .re-email-sign {
   font-size: 13px;
-  color: #555555;
+  color:white;
   line-height: 1.6;
   margin: 0;
 }

@@ -1,17 +1,31 @@
+import {
+  SiNodedotjs,
+  SiServerless,
+  SiRuby,
+  SiPython,
+  SiPhp,
+  SiGo,
+  SiRust,
+  SiElixir,
+  SiDotnet,
+} from 'react-icons/si'
+import { FaJava } from 'react-icons/fa'
+import { LuTerminal, LuBraces, LuMail } from 'react-icons/lu'
+
 const languages = [
-  { name: 'Node.js', icon: 'JS' },
-  { name: 'Serverless', icon: '⚡' },
-  { name: 'Ruby', icon: '◈' },
-  { name: 'Python', icon: 'py' },
-  { name: 'PHP', icon: 'php' },
-  { name: 'CLI', icon: '>_' },
-  { name: 'Go', icon: 'go' },
-  { name: 'Rust', icon: 'rs' },
-  { name: 'Java', icon: '☕' },
-  { name: 'Elixir', icon: 'ex' },
-  { name: '.NET', icon: '.NET' },
-  { name: 'REST', icon: '{ }' },
-  { name: 'SMTP', icon: 'SMTP' },
+  { name: 'Node.js', Icon: SiNodedotjs },
+  { name: 'Serverless', Icon: SiServerless },
+  { name: 'Ruby', Icon: SiRuby },
+  { name: 'Python', Icon: SiPython },
+  { name: 'PHP', Icon: SiPhp },
+  { name: 'CLI', Icon: LuTerminal },
+  { name: 'Go', Icon: SiGo },
+  { name: 'Rust', Icon: SiRust },
+  { name: 'Java', Icon: FaJava },
+  { name: 'Elixir', Icon: SiElixir },
+  { name: '.NET', Icon: SiDotnet },
+  { name: 'REST', Icon: LuBraces },
+  { name: 'SMTP', Icon: LuMail },
 ]
 
 export function Integrations() {
@@ -25,7 +39,7 @@ export function Integrations() {
           muted
           playsInline
         >
-          <source src="/3d-integrate-morning.mp4" type="video/mp4" />  
+          <source src="/3d-integrate-morning.mp4" type="video/mp4" />
         </video>
       </div>
 
@@ -40,15 +54,15 @@ export function Integrations() {
 
       <div className="languages-scroll-container">
         <div className="language-row">
-          {languages.map((lang) => (
+          {languages.map(({ name, Icon }) => (
             <div
-              className={`language-item ${lang.name === 'Ruby' ? 'selected' : ''}`}
-              key={lang.name}
+              className={`language-item ${name === 'Ruby' ? 'selected' : ''}`}
+              key={name}
             >
               <div className="language-icon">
-                {lang.icon}
+                <Icon size={28} />
               </div>
-              <span className="language-name">{lang.name}</span>
+              <span className="language-name">{name}</span>
             </div>
           ))}
         </div>
