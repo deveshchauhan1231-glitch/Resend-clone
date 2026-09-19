@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BarChart3, Globe2, KeyRound, Mail, Settings, Users, Webhook, Radio, SlidersHorizontal, MessageSquare, ShieldCheck, Eye } from 'lucide-react'
+import { BarChart3,  ShieldCheck, Eye } from 'lucide-react'
 
 const controls = [
   { id: 'analytics', icon: BarChart3, label: 'Intuitive analytics' },
