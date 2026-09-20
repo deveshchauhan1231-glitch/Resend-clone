@@ -4,6 +4,8 @@
 
 /* Inter Variable — UI / body text */
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap');
+
 @font-face {
   font-family: 'Inter';
   src: url('/fonts/inter_variable.p.2v4uvb3i5caxn.woff2') format('woff2');
@@ -47,10 +49,12 @@
 
 :root {
   /* Exact font stack used by resend.com */
+  
   --font-sans:  'Google Sans', 'Inter', 'Segoe UI', sans-serif;
   
   --font-mono:  'Commit Mono', 'JetBrains Mono', monospace;
   --font-ui: 'Google Sans', 'Inter', sans-serif;
+  --font-serif: 'Instrument Serif', 'Times New Roman', serif;
 
 
   --bg: #000000;

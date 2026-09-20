@@ -308,29 +308,37 @@ a.button {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 14px;
+  padding: 8px 14px;
   border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: var(--text-secondary);
+  border: 1px solid transparent;
+  background:
+    linear-gradient(#0b0d12, #0b0d12) padding-box,
+    linear-gradient(90deg, #22c1a4, #f5a623 50%, #8b5cf6) border-box;
+  color: #fff;
   font-size: 13px;
   font-weight: 400;
   transition: all 0.2s ease;
   margin-bottom: 32px;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
 }
 
-.event-pill:hover {
-  border-color: rgba(255, 255, 255, 0.25);
-  background: rgba(255, 255, 255, 0.06);
-  color: #ffffff;
+.event-pill::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background:
+    radial-gradient(ellipse at center, #0b0d12 25%, transparent 100%),
+    linear-gradient(90deg, #22c1a4, #f5a623 50%, #8b5cf6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.pill-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--brand-green);
-  box-shadow: 0 0 8px var(--brand-green);
+.event-pill:hover::before {
+  opacity: 0.55;
 }
 
 .pill-arrow {
@@ -339,20 +347,25 @@ a.button {
   transition: transform 0.15s ease;
 }
 
+/* Hero title: the ONLY place the serif font is used */
 .hero-copy-block h1 {
   font-family: var(--font-serif);
   font-size: clamp(54px, 6.5vw, 84px);
   font-weight: 400;
   line-height: 0.98;
-  letter-spacing: -0.03em;
-  color: #ffffff;
-  margin-bottom: 24px;
+  letter-spacing: 0.02em;
+  word-spacing: 0.1em;
+  margin-bottom: 16px;
+  padding-bottom: 0.1em; /* keeps descenders (the "p") from being clipped by the gradient text */
+  background: linear-gradient(180deg, #ffffff 30%, rgba(255, 255, 255, 0.55) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .hero-copy-block h1 em {
-  font-style: italic;
+  font-style: normal;
   font-weight: 400;
-  color: #ffffff;
 }
 
 .hero-copy-block p {
@@ -391,14 +404,6 @@ a.button {
   width: 100%;
 }
 
-.hero-video-glow {
-  position: absolute;
-  width: 480px;
-  height: 480px;
-  
-  filter: blur(40px);
-  pointer-events: none;
-}
 
 .hero-video {
   mix-blend-mode: screen;
@@ -407,7 +412,7 @@ a.button {
   height: auto;
   object-fit: cover;
   border-radius: 24px;
-  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.8));
+  
 }
 
 /* --------------------------------------------------------------------------
@@ -531,7 +536,7 @@ a.button {
 .beyond-heading h2,
 .showcase-copy h2,
 .deliverability-section h2 {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: clamp(38px, 4.8vw, 60px);
   font-weight: 400;
   line-height: 1.05;
@@ -1953,7 +1958,7 @@ a.button {
 }
 
 .final-cta h2 {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: clamp(48px, 6.5vw, 84px);
   font-weight: 400;
   line-height: 1.0;
@@ -2003,7 +2008,9 @@ a.button {
   transition: opacity 500ms ease-out;
 
   overflow: visible;
-}/* --------------------------------------------------------------------------
+}
+
+/* --------------------------------------------------------------------------
    SITE FOOTER
    -------------------------------------------------------------------------- */
 .site-footer {
@@ -2274,9 +2281,8 @@ a.button {
   filter: drop-shadow(0 0 18px rgba(0, 200, 212, 0.3));
 }
 
-/* re-section h2 inherits the shared serif heading rule via .re-section h2 */
 .re-section h2 {
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: clamp(36px, 4.5vw, 58px);
   font-weight: 400;
   line-height: 1.06;
@@ -2699,4 +2705,3 @@ a.button {
     gap: 12px;
   }
 }
-

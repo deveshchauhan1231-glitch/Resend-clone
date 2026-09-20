@@ -22,7 +22,7 @@ function App() {
   <div className="hero-inner">
     <div className="hero-copy-block">
       <a className="event-pill" href="#forward">
-        <span className="pill-dot" />
+        
         <span>Join us at Resend Forward</span>
         <span className="pill-arrow">›</span>
       </a>
