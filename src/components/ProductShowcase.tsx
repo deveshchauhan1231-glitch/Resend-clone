@@ -9,7 +9,7 @@ export function ProductShowcase() {
         <p>
           We are a team of engineers who love building tools for other engineers.
           <br />
-          Our goal is to create the email platform we've always wished we had — one that <em>just works.</em>
+          Our goal is to create the email platform we've always wished we had — one that <i>just works.</i>
         </p>
       </div>
 

@@ -34,14 +34,14 @@ function App() {
 
       <p>
         The best way to reach humans instead of spam folders.
-        <br />
+        
         Deliver transactional and marketing emails at scale.
       </p>
 
       <div className="hero-actions">
         <a className="button button-primary" href="#start">
           Get started
-          <span className="btn-arrow">›</span>
+          
         </a>
 
         <a className="muted-link" href="#docs">
@@ -147,9 +147,11 @@ function App() {
           </p>
           <EditorShowcase />
         </section>
-        <ReactEmailShowcase />
+        
         {/* BEYOND EDITING */}
         <BeyondEditing />
+
+        <ReactEmailShowcase />
 
         {/* DELIVERABILITY */}
         <Deliverability />

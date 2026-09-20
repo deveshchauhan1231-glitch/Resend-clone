@@ -154,10 +154,7 @@ export function ReactEmailShowcase() {
           <div className="re-preview-pane" aria-label="Email preview">
             <div className="re-email-card">
               <div className="re-email-logo-wrap">
-                <div className="re-email-orb">
-                  <div className="re-orb-inner" />
-                  <div className="re-orb-dot" />
-                </div>
+                 <img src="/example-logo.webp" />
               </div>
 
               <h3 className="re-email-heading">
